@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  min-height: 24em;
+  justify-content: center;
+}
+
+.Aligner-item {
+  flex: 1;
+}
+
+.Aligner-item--top {
+  align-self: flex-start;
+}
+
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+
+.Aligner-item--fixed {
+  flex: none;
+  max-width: 50%;
+}
+</style>
+</head>
+<body>
+
+<div class="Aligner">
+  <div class="Aligner-item Aligner-item--top" style="background-color: red">Top</div>
+  <div class="Aligner-item" style="background-color: blue">Centered</div>
+  <div class="Aligner-item" style="background-color: gold">Centered</div>
+  <div class="Aligner-item Aligner-item--bottom">Bottom</div>
+</div>
+
+</body>
+</html>

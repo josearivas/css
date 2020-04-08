@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header header"
+	"nav subheader"
+    "nav content"
+    "nav footer";
+
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: red;  
+}
+
+subheader {
+  grid-area: header;
+  background-color: white;  
+}
+
+nav {
+  grid-area: nav;
+  background-color: blue;
+}
+
+main {
+  grid-area: content;
+  background-color: grey;
+}
+
+footer {
+  grid-area: footer;
+  background-color: brown;
+}
+
+</style>
+</head>
+<body>
+<div class="container" id="myDIV">
+  <header id="test" style="background-color: gold">
+    <!-- Header content -->
+	Header
+  </header>
+
+  <div class="subheader">
+    <!-- Header content -->
+	Header
+  </div>
+
+  <nav>
+    <!-- Navigation -->
+	Navigation
+  </nav>
+
+  <main>
+    <!-- Main content -->
+	Main
+	<img src="carro.png" alt="vamosssssssssssssssss">
+  </main>
+
+  <footer>
+	Footer
+    <!-- Footer content -->
+	<p><button onclick="myFunction()">Change layout</button></p>
+  </footer>
+</div>
+
+<script>
+function myFunction() {
+  console.log(document.getElementById("myDIV").style.gridTemplateColumns);
+  
+  if(document.getElementById("myDIV").style.gridTemplateColumns == "200px 1fr" || !document.getElementById("myDIV").style.gridTemplateColumns)
+	document.getElementById("myDIV").style.gridTemplateColumns = "54px 1fr";
+  else
+	document.getElementById("myDIV").style.gridTemplateColumns = "200px 1fr";
+  
+  
+}
+</script>
+</body>
+</html>
